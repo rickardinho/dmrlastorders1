@@ -1,0 +1,3 @@
+rootProject.name = 'lastorders1'
+
+include ':app'
