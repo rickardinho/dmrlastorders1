@@ -1,6 +1,4 @@
-var ReactN = require('react-native');
-var { AppRegistry } = ReactN;
+import { AppRegistry } from 'react-native';
+import App from './src/app';
 
-var Main = require('./src/main');
-
-AppRegistry.registerComponent('lastorders1', () => Main);
+AppRegistry.registerComponent('lastorders1', () => App);

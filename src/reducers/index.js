@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import WeatherReducer from './reducer_weather';
+import LibraryReducer from './LibraryReducer';
+import SelectionReducer from './SelectionReducer';
 
-const rootReducer = combineReducers({
+export default combineReducers({
+  libraries: LibraryReducer,
+  selectedLibraryId: SelectionReducer,
   weather: WeatherReducer
 });
-
-export default rootReducer;
