@@ -9,7 +9,8 @@ class ListItem extends Component {
   render() {
     console.log(this.props);
     const { titleStyle } = styles;
-    const { name } = this.props.name;
+    const { name } = this.props.pub;
+    console.log({ name });
 
     return (
         <View>
@@ -36,7 +37,6 @@ const styles = {
 
 const mapStateToProps = ({ pubs }) => {
   const { pubslist } = pubs;
-  console.log(pubslist);
   return { pubslist };
 };
 
