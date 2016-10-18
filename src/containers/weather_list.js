@@ -1,11 +1,4 @@
-var ReactN = require('react-native');
-var{
-  View,
-  Text,
-  TextInput,
-  StyleSheet,
-  TouchableHighlight
-} = ReactN;
+import { View, Text } from 'react-native';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 //import GoogleMap from '../components/google_map';
@@ -13,13 +6,10 @@ import { connect } from 'react-redux';
 class WeatherList extends Component {
   renderWeather(placesData) {
     const name = placesData.results.name;
-    const { lat, lng } = placesData.results.geometry.location;
-
+    //const { lat, lng } = placesData.results.geometry.location;
     return (
       <View>
-        //<Text>{name}</Text>
-        //<View><GoogleMap lon={lon} lat={lat} /></View>
-        //<Text><Chart data={temps} color="orange" units="K" /></Text>
+        <Text>{name}</Text>
       </View>
     );
   }
@@ -28,15 +18,15 @@ class WeatherList extends Component {
     return (
 
         <View>
-          {this.props.weather.map(this.renderWeather)}
+          {this.props.pubs.map(this.renderWeather)}
         </View>
 
     );
   }
 }
 
-function mapStateToProps({ weather }) {
-  return { weather };
+function mapStateToProps({ pubslist }) {
+  return { pubslist };
 }
 
 export default connect(mapStateToProps)(WeatherList);
