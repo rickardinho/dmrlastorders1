@@ -8,15 +8,21 @@ class ListItem extends Component {
 
   render() {
     console.log(this.props);
-    const { titleStyle } = styles;
+    const { titleStyle, descriptionStyle } = styles;
     const { name } = this.props.pub;
-    console.log({ name });
+    const { place_id } = this.props.pub;
 
     return (
         <View>
           <CardSection>
             <Text style={titleStyle}>
               {name}
+            </Text>
+            <Text style={descriptionStyle}>
+              200m {place_id}
+            </Text>
+            <Text style={descriptionStyle}>
+              open for: 1 hr
             </Text>
           </CardSection>
         </View>
@@ -27,7 +33,8 @@ class ListItem extends Component {
 const styles = {
   titleStyle: {
     fontSize: 18,
-    paddingLeft: 15
+    paddingLeft: 15,
+    height: 50
   },
   descriptionStyle: {
     paddingLeft: 10,

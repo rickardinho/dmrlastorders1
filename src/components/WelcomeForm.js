@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text } from 'react-native';
 import { connect } from 'react-redux';
-import { getPubs, coordChanged } from '../actions';
+import { getPubs, getPlaceDetails, coordChanged } from '../actions';
 import { Card, CardSection, Button, Input, Spinner } from './common';
 
 class WelcomeForm extends Component {
